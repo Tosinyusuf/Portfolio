@@ -49,27 +49,21 @@ const Nav = () => {
   }, [menuToggle]);
 
   useEffect(() => {
-    // GSAP timeline for controlling animations
-    const tl = gsap.timeline({ paused: true });
-
-    // Define the slide-in effect for the menu container
-    tl.fromTo(
-      menuRef.current,
-      { y: "-100%", opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.5, ease: "easeIn" }
-    );
-
-    // Play or reverse the animation based on menuToggle
     if (menuToggle) {
-      tl.play();
-    } else {
-      tl.reverse();
+      // Animate the menu slide-in effect
+      gsap.fromTo(
+        menuRef.current,
+        { y: "-100%", opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.5, ease: "easeIn" }
+      );
+      
+      // Stagger animation for each menu item
+      gsap.fromTo(
+        linksRef.current,
+        { opacity: 0, x: -20 },
+        { opacity: 1, x: 0, duration: 0.4, stagger: 0.1, ease: "power2.out" }
+      );
     }
-
-    return () => {
-      // Clear timeline to prevent memory leaks
-      tl.kill();
-    };
   }, [menuToggle]);
 
   return (
@@ -80,9 +74,9 @@ const Nav = () => {
         </div>
       </ul>
       <div
-        ref={menuRef}
+           ref={menuRef}
         className={`bg-[#181818] md:hidden  flex items-start justify-between px-5 fixed top-0 w-full min-h-screen left-0 
-          ${menuToggle ? "opacity-1  pt-5" : "opacity-0 -translate-x-full"}
+          ${menuToggle ? "opacity-1  pt-5" : "opacity-0 hidden"}
         `}
       >
         <ul className="pt-14 flex-1 flex flex-col gap-10 text-white">
