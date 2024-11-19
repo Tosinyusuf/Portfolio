@@ -1,12 +1,12 @@
 import React from "react";
-import Project1 from "@/assets/image/node.svg";
-import Project2 from "@/assets/image/nest.svg";
-import Project3 from "@/assets/image/laravel.svg";
-import Project4 from "@/assets/image/mongo.svg";
-import Project5 from "@/assets/image/postgress.svg";
+import Project1 from "@/assets/image/docker.svg";
+import Project2 from "@/assets/image/kubernetes.svg";
+import Project3 from "@/assets/image/vercel.svg";
+import Project4 from "@/assets/image/aws.svg";
+import Project5 from "@/assets/image/netlify.svg";
 import Image from "next/image";
 
-const Backend = () => {
+const DevOps = () => {
   const colors = [
     { color: "#f0db4f", image: Project1 },
     { color: "#61dbfb", image: Project2 },
@@ -46,4 +46,4 @@ const Backend = () => {
   );
 };
 
-export default Backend;
+export default DevOps;

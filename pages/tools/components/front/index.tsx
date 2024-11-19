@@ -4,6 +4,11 @@ import Project2 from "@/assets/image/project2.svg";
 import Project3 from "@/assets/image/project3.svg";
 import Project4 from "@/assets/image/project4.svg";
 import Project5 from "@/assets/image/project5.svg";
+import Css from "@/assets/image/css.svg";
+import Vue from "@/assets/image/vuejs.svg";
+import Tailwind from "@/assets/image/tailwind.svg";
+import Scss from "@/assets/image/scss.svg";
+import Mui from "@/assets/image/mui.svg";
 import Image from "next/image";
 
 const Frontend = () => {
@@ -13,11 +18,11 @@ const Frontend = () => {
     { color: "#fff", image: Project3 },
     { color: "#2196F3", image: Project4 },
     { color: "#FF5722", image: Project5 },
-    { color: "#f0db4f", image: Project1 },
-    { color: "#61dbfb", image: Project2 },
-    { color: "#fff", image: Project3 },
-    { color: "#2196F3", image: Project4 },
-    { color: "#FF5722", image: Project5 },
+    { color: "#f0db4f", image: Css },
+    { color: "#61dbfb", image: Vue },
+    { color: "#fff", image: Tailwind },
+    { color: "#2196F3", image: Scss },
+    { color: "#FF5722", image: Mui },
   ];
 
   return (

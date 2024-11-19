@@ -1,12 +1,14 @@
 import React from "react";
-import Project1 from "@/assets/image/project1.svg";
+import Project1 from "@/assets/image/niyolabs.svg";
+import Project2 from "@/assets/image/eze.svg";
+import Project3 from "@/assets/image/clubarant.svg";
 import Image from "next/image";
-// import "./index.scss";
+import Link from "next/link";
 
 const Project = () => {
   return (
     <section
-      className="min-h-screen business-section scroll-snap-start flex items-center justify-center px-5 md:px-8"
+      className="min-h-screen business-section scroll-snap-start flex items-center justify-center px-5 md:px-8 pt-14 md:pt-1"
       id="project"
     >
       <div className="w-full">
@@ -21,28 +23,54 @@ const Project = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-4">
           <div className="rounded-lg min-h-[15rem] w-full h-full relative">
-            <div>
-              <Image src={Project1} className="h-full w-full" alt="projects" />
-            </div>
+            <Link href={"/niyolabs"} target="_blank" rel="noopener noreferrer">
+              <div>
+                <Image
+                  src={Project1}
+                  className="h-full w-full"
+                  alt="projects"
+                />
+              </div>
+            </Link>
             <div className="font-mainlux font-[300] text-[1.5rem] leading-[3.44rem] pt-4">
               NiyoLabs
             </div>
           </div>
           <div className="rounded-lg min-h-[15rem]">
-            <div>
-              <Image src={Project1} className="h-full w-full" alt="projects" />
-            </div>
-            <div className="font-mainlux font-[300] text-[1.5rem] leading-[3.44rem] pt-4">
-              Eze Enterprise
-            </div>
+            <Link
+              href={"/enterprise"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div>
+                <Image
+                  src={Project2}
+                  className="h-full w-full"
+                  alt="projects"
+                />
+              </div>
+              <div className="font-mainlux font-[300] text-[1.5rem] leading-[3.44rem] pt-4">
+                Eze Enterprise
+              </div>
+            </Link>
           </div>
           <div className="rounded-lg min-h-[15rem]">
-            <div>
-              <Image src={Project1} className="h-full w-full" alt="projects" />
-            </div>
-            <div className="font-mainlux font-[300] text-[1.5rem] leading-[3.44rem] pt-4">
-              Clubarant
-            </div>
+            <Link
+              href={"/clubarant"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div>
+                <Image
+                  src={Project3}
+                  className="h-full w-full"
+                  alt="projects"
+                />
+              </div>
+              <div className="font-mainlux font-[300] text-[1.5rem] leading-[3.44rem] pt-4">
+                Clubarant
+              </div>
+            </Link>
           </div>
         </div>
       </div>

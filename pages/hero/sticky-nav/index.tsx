@@ -33,9 +33,9 @@ const FixedBar = ({}) => {
 
     // ScrollTriggers to change the nav background color based on sections
     const colorTriggers = [
-      { selector: ".about-tag", color: "rgba(51, 51, 51, 0.85)" }, // Red for About
-      { selector: ".project-tag", color: "rgba(51, 51, 51, 0.85)" }, // Green for Projects
-      { selector: ".tools-tag", color: "rgba(51, 51, 51, 0.85)" }, // Blue for Tools
+      { selector: ".about-tag", color: "black" }, // Red for About
+      { selector: ".project-tag", color: "black" }, // Green for Projects
+      { selector: ".tools-tag", color: "black" }, // Blue for Tools
     ];
 
     colorTriggers.forEach(({ selector, color }) => {
@@ -44,10 +44,11 @@ const FixedBar = ({}) => {
         start: "top center",
         end: "bottom center",
         onEnter: () => {
-          if (navElement) navElement.style.backgroundColor = color;
+          if (navElement) navElement.style.color = color;
+          console.log(navElement,"navElement")
         },
         onLeaveBack: () => {
-          if (navElement) navElement.style.backgroundColor = "rgba(51, 51, 51, 0.85)"; // reset or set to default color
+          if (navElement) navElement.style.color = "white"; // reset or set to default color
         },
       });
     });
@@ -57,7 +58,7 @@ const FixedBar = ({}) => {
       trigger: ".footer",
       start: "top center",
       onEnter: () => {
-        if (navElement) navElement.style.backgroundColor = "rgba(51, 51, 51, 0.85)"; // Reset in footer
+        if (navElement) navElement.style.color = "black"; // Reset in footer
       },
     });
 
@@ -111,40 +112,40 @@ const FixedBar = ({}) => {
     <header className={`${mainHeaderStlye} fixedbar opacity-1 mb-11`}>
       <nav
         className={`innerBar ${navStyle}`}
-        style={{ backgroundColor: "hsla(0, 0%, 100%, 0.15)" }}
+        style={{ backgroundColor: "#ADACAC29", color: 'white' }}
       >
         <ul className="flex w-full justify-between items-center">
           <li className="pin-nav active-tag">
             <div className="tosin-tag inline-flex gap-1.5 md:gap-3 items-center p-1.5 md:p-2 rounded-md">
-              <p className="text-sm md:text-[1.2rem] leading-[1.2rem] text-white font-mainlux font-[100] whitespace-nowrap">
+              <p className="text-sm md:text-[1.2rem] leading-[1.2rem]  font-mainlux font-[100] whitespace-nowrap">
                 TY
               </p>
             </div>
           </li>
           <li className="pin-nav  ">
             <div className="about-tag inline-flex gap-1.5 md:gap-3 items-center p-1.5 md:p-3 rounded-md">
-              <p className="text-sm md:text-[1.2rem] leading-[1.2rem] text-white font-mainlux font-[100] whitespace-nowrap">
+              <p className="text-sm md:text-[1.2rem] leading-[1.2rem]  font-mainlux font-[100] whitespace-nowrap">
                 About
               </p>
             </div>
           </li>
           <li className="pin-nav ">
             <div className="project-tag inline-flex gap-1.5 md:gap-3 items-center p-1.5 md:p-3 rounded-md ">
-              <p className="text-sm md:text-[1.2rem] leading-[1.2rem] text-white font-mainlux font-[100] whitespace-nowrap">
+              <p className="text-sm md:text-[1.2rem] leading-[1.2rem]  font-mainlux font-[100] whitespace-nowrap">
                 Projects
               </p>
             </div>
           </li>
           <li className="pin-nav ">
             <div className="tools-tag inline-flex gap-1.5 md:gap-3 items-center p-1.5 md:p-2 rounded-md ">
-              <p className="text-sm md:text-[1.2rem] leading-[1.2rem] text-white font-mainlux font-[100] whitespace-nowrap">
+              <p className="text-sm md:text-[1.2rem] leading-[1.2rem]  font-mainlux font-[100] whitespace-nowrap">
                 Tools
               </p>
             </div>
           </li>
           <li className="pin-nav ">
             <div className="tools-tag inline-flex gap-1.5 md:gap-3 items-center p-1.5 md:p-2 rounded-md ">
-              <p className="text-sm md:text-[1.2rem] leading-[1.2rem] text-white font-mainlux font-[100] whitespace-nowrap">
+              <p className="text-sm md:text-[1.2rem] leading-[1.2rem]  font-mainlux font-[100] whitespace-nowrap">
                 Contact
               </p>
             </div>

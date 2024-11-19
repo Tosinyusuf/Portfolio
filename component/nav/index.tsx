@@ -7,25 +7,25 @@ import logo from "img/white-full-logo.svg";
 import menu from "img/menu.svg";
 import Link from "next/link";
 
-const Nav = () => {
+const Nav = ({ project }: { project?: boolean }) => {
   const menuRef = useRef(null);
   const linksRef = useRef([]);
   const navList = [
     {
       text: "Tosin",
-      link: "#tosin",
+      link: "/#tosin",
     },
     {
       text: "About",
-      link: "#about",
+      link: "/#about",
     },
     {
       text: "Projects",
-      link: "#project",
+      link: "/#project",
     },
     {
       text: "Tools",
-      link: "#tools",
+      link: "/#tools",
     },
   ];
 
@@ -56,7 +56,7 @@ const Nav = () => {
         { y: "-100%", opacity: 0 },
         { y: 0, opacity: 1, duration: 0.5, ease: "easeIn" }
       );
-      
+
       // Stagger animation for each menu item
       gsap.fromTo(
         linksRef.current,
@@ -68,13 +68,16 @@ const Nav = () => {
 
   return (
     <nav className="relative z-50">
-      <ul className="navList md:flex hidden justify-between items-center gap-5 text-white p-5 md:p-8">
-        <div>
-          <Image width={100} height={40} src={logo} alt="Logo" />
-        </div>
-      </ul>
+      {" "}
+      {!project && (
+        <ul className="navList md:flex hidden justify-between items-center gap-5 text-white p-5 md:p-8">
+          <div>
+            <Image width={100} height={40} src={logo} alt="Logo" />
+          </div>
+        </ul>
+      )}
       <div
-           ref={menuRef}
+        ref={menuRef}
         className={`bg-[#181818] md:hidden  flex items-start justify-between px-5 fixed top-0 w-full min-h-screen left-0 
           ${menuToggle ? "opacity-1  pt-5" : "opacity-0 hidden"}
         `}
@@ -90,7 +93,6 @@ const Nav = () => {
           <Image width={30} height={40} src={menu} alt="Logo" />
         </div>
       </div>
-
       <div className="flex justify-between px-5 py-5 items-center md:hidden bg-[#181818] fixed w-full">
         <div>
           <Image width={70} height={57} src={logo} alt="Logo" />

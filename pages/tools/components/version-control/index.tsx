@@ -1,12 +1,12 @@
 import React from "react";
-import Project1 from "@/assets/image/node.svg";
-import Project2 from "@/assets/image/nest.svg";
-import Project3 from "@/assets/image/laravel.svg";
-import Project4 from "@/assets/image/mongo.svg";
-import Project5 from "@/assets/image/postgress.svg";
+import Project1 from "@/assets/image/git.svg";
+import Project2 from "@/assets/image/slack.svg";
+import Project3 from "@/assets/image/clickup.svg";
+import Project4 from "@/assets/image/jira.svg";
+import Project5 from "@/assets/image/shortcut.svg";
 import Image from "next/image";
 
-const Backend = () => {
+const VersionControl = () => {
   const colors = [
     { color: "#f0db4f", image: Project1 },
     { color: "#61dbfb", image: Project2 },
@@ -46,4 +46,4 @@ const Backend = () => {
   );
 };
 
-export default Backend;
+export default VersionControl;
