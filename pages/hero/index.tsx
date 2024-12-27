@@ -12,7 +12,7 @@ const Hero = () => {
       <div className="">
         <div className="flex justify-center flex-col items-center absolute bottom-[230px] left-0 right-0 mx-auto">
           <p className="font-mainlux font-[300] text-[1.25rem] leading-8 text-[#fff]">
-            Senior Frontend Engineer
+            Senior Full stack Engineer
           </p>
           <p className="font-spartans leading-[88.32px] text-[2rem] md:text-[6rem] font-[500] text-[#fff]">
             Oluwatosin Yusuf
